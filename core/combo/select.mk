@@ -66,10 +66,10 @@ endif
 ifeq ($(DEBUG_NO_STRICT_ALIASING),yes)
 $(combo_target)RELEASE_CFLAGS += -fno-strict-aliasing -Wno-error=strict-aliasing
 endif
-$(combo_target)GLOBAL_LDFLAGS := -Wl,-O2 -Wl,--sort-common -s
+$(combo_target)GLOBAL_LDFLAGS := -Wl,-O3 -Wl,--sort-common -s
 else
 $(warning USING BONE STOCK CFLAGS)
-$(combo_target)RELEASE_CFLAGS := -O2 -g -fno-strict-aliasing
+$(combo_target)RELEASE_CFLAGS := -O3 -g -fno-strict-aliasing
 $(combo_target)GLOBAL_LDFLAGS :=
 endif
 $(combo_target)GLOBAL_ARFLAGS := crsP
